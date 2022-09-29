@@ -2,8 +2,6 @@
     display: grid;
     grid-template-columns: 4fr 1fr;
     background-color: black;
-
-
 }
 
 .Style-container {
@@ -14,13 +12,16 @@
 }
 
 .cartStyle-container {
-    background-color: rgba(179, 203, 236, 0.686);
+    background-color: aqua;
+
 }
 
 .my-info img {
     height: 40px;
-    width: 20px;
+    width: 40px;
     margin: 20px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .my-info {
@@ -28,15 +29,12 @@
     padding-right: 10px;
 
     justify-content: space-between;
-
 }
 
 .person-info {
     display: flex;
     justify-content: space-between;
     padding: 5px;
-
-
 }
 
 .num1 {
@@ -64,21 +62,17 @@
 }
 
 .break-time {
-
     padding: 15px;
     background: plum;
     margin: 10px;
     color: black;
     font-weight: bold;
-
-
 }
 
 .exercise-info h4 {
     padding: 5px;
     margin: 5px;
     background: plum;
-
 }
 
 .btn-add {
@@ -94,22 +88,57 @@
     font-weight: bolder;
 
     margin: 10px;
-
 }
 
+/* dextop */
+@media only screen and (min-width: 1224px) {
+    .Style-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* tablet responsive */
+@media only screen and (max-width: 768px) {
+    .Style-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin: 25px 10px;
+    }
+}
 
 /* for mobile */
-@media only screen and (min-width: 667px) {
-    .Product-Container {
-
-
+@media only screen and (max-width: 667px) {
+    .Style-container {
+        display: grid;
         grid-template-columns: repeat(1, 1fr);
+    }
 
+    .header {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
 
+    .num1 {
+        width: 30px;
+        background-color: aqua;
+    }
 
+    .num2 {
 
+        width: 30px;
+        background-color: aqua;
 
     }
 
+    .num3 {
+        width: 30px;
+        background-color: aqua;
+    }
 
+    .cartStyle-container {
+        background-color: aqua;
+        width: 100%;
+    }
 }

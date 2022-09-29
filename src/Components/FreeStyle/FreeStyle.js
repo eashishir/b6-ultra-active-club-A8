@@ -6,6 +6,12 @@ import my from '../../image/download.png'
 const FreeStyle = () => {
     const [freeStyles, setFreeStyles] = useState([])
     const [cart, setCart] = useState(0);
+    const [breakTime, setBreakTime] = useState(0);
+    // console.log(breakTime);
+
+
+
+
     useEffect(() => {
         fetch('freestyle.json')
             .then(res => res.json())
@@ -19,6 +25,22 @@ const FreeStyle = () => {
 
 
     }
+
+    const TimeBreakHandle = (event) => {
+        const btnValue = event.target.innerText;
+        const ParseValue = parseInt(btnValue);
+        localStorage.setItem('time-break', ParseValue);
+        setBreakTime(ParseValue);
+    }
+
+    useEffect(() => {
+
+        const getTimeBreak = localStorage.getItem('time-break');
+        setBreakTime(getTimeBreak)
+
+    }, []);
+
+
 
     return (
         <div className="freeStyle-container">
@@ -55,18 +77,18 @@ const FreeStyle = () => {
                         <h6>Age</h6>
                     </div>
                 </div>
-                <h2>Add A Break(min)</h2>
+                <h4>Add A Break(min)</h4>
                 <div className='break-time'>
-                    <button>10</button>
-                    <button>20</button>
-                    <button>30</button>
-                    <button>40</button>
+                    <button onClick={(event) => TimeBreakHandle(event)}>10</button>
+                    <button onClick={(event) => TimeBreakHandle(event)}>20</button>
+                    <button onClick={(event) => TimeBreakHandle(event)}>30</button>
+                    <button onClick={(event) => TimeBreakHandle(event)}>40</button>
 
                 </div>
-                <h2>Exercise Details</h2>
+                <h4>Exercise Details</h4>
                 <div className=' exercise-info'>
-                    <h4>Exercise time:{cart}min</h4>
-                    <h4>break time: <small>0</small> min</h4>
+                    <h6>Exercise time: {cart}min</h6>
+                    <h6>Break time: <small>{breakTime}</small> min</h6>
                 </div>
                 <button className='btn-add'>
                     <p>Activity Completed</p>
