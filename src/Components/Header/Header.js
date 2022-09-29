@@ -11,16 +11,7 @@ import Navbar from 'react-bootstrap/Navbar';
 const Header = () => {
     return (
         <div>
-            {/* <nav className='header'>
-                <img src={logo} alt="" />
-                <h1>Style In Free Style </h1>
-                <div>
-                    <a href="/shop">Skills</a>
-                    <a href="/orders">Practice</a>
-                    <a href="/inventory">Inventory</a>
-                    <a href="/abut">About</a>
-                </div>
-            </nav> */}
+
 
 
 
