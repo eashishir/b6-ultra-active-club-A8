@@ -13,7 +13,7 @@ const Style = ({ freestyle, handelAddTolCart }) => {
                 <br />
 
             </div>
-            <button onClick={() => handelAddTolCart(freestyle)} className='btn-cart'>
+            <button onClick={() => handelAddTolCart(time)} className='btn-cart'>
                 <p>Add To Cart</p>
 
             </button>

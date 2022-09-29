@@ -5,18 +5,18 @@ import my from '../../image/download.png'
 
 const FreeStyle = () => {
     const [freeStyles, setFreeStyles] = useState([])
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState(0);
     useEffect(() => {
         fetch('freestyle.json')
             .then(res => res.json())
             .then(data => setFreeStyles(data))
     }, []);
 
-    const handelAddTolCart = (freeStyle) => {
-        // console.log(freeStyle)
-        const newCart = [...cart, freeStyle];
+    const handelAddTolCart = (time) => {
+        // console.log(time)
+        const newCart = parseFloat(cart) + parseFloat(time);
         setCart(newCart);
-        console.log(newCart[0])
+
 
     }
 
@@ -57,15 +57,15 @@ const FreeStyle = () => {
                 </div>
                 <h2>Add A Break(min)</h2>
                 <div className='break-time'>
-                    <a href="">10</a>
-                    <a href="">20</a>
-                    <a href="">30</a>
-                    <a href="">40</a>
-                    <a href="">50</a>
+                    <button>10</button>
+                    <button>20</button>
+                    <button>30</button>
+                    <button>40</button>
+
                 </div>
                 <h2>Exercise Details</h2>
                 <div className=' exercise-info'>
-                    <h4>Exercise time:{cart.time}min</h4>
+                    <h4>Exercise time:{cart}min</h4>
                     <h4>break time: <small>0</small> min</h4>
                 </div>
                 <button className='btn-add'>

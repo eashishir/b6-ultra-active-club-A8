@@ -63,14 +63,15 @@
     border-radius: 10px;
 }
 
-.break-time a {
-    text-decoration: none;
-    padding: 10px;
+.break-time {
+
+    padding: 15px;
     background: plum;
-    margin: 5px;
+    margin: 10px;
     color: black;
     font-weight: bold;
-    border-radius: 5px;
+
+
 }
 
 .exercise-info h4 {
@@ -93,5 +94,22 @@
     font-weight: bolder;
 
     margin: 10px;
+
+}
+
+
+/* for mobile */
+@media only screen and (min-width: 667px) {
+    .Product-Container {
+
+
+        grid-template-columns: repeat(1, 1fr);
+
+
+
+
+
+    }
+
 
 }
