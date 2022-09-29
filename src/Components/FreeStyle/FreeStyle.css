@@ -1,0 +1,97 @@
+.freeStyle-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    background-color: black;
+
+
+}
+
+.Style-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 25px 10px;
+}
+
+.cartStyle-container {
+    background-color: rgba(179, 203, 236, 0.686);
+}
+
+.my-info img {
+    height: 40px;
+    width: 20px;
+    margin: 20px;
+}
+
+.my-info {
+    display: flex;
+    padding-right: 10px;
+
+    justify-content: space-between;
+
+}
+
+.person-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+
+
+}
+
+.num1 {
+    background: palevioletred;
+    height: 90px;
+    width: 60px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.num2 {
+    background: palevioletred;
+    height: 90px;
+    width: 60px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.num3 {
+    background: palevioletred;
+    height: 90px;
+    width: 60px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.break-time a {
+    text-decoration: none;
+    padding: 10px;
+    background: plum;
+    margin: 5px;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.exercise-info h4 {
+    padding: 5px;
+    margin: 5px;
+    background: plum;
+
+}
+
+.btn-add {
+    width: 80%;
+    background: orangered;
+    border: none;
+    border-radius: 10px;
+
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+
+    margin: 10px;
+
+}
