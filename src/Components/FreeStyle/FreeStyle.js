@@ -65,7 +65,7 @@ const FreeStyle = () => {
                 </div>
                 <div className='person-info'>
                     <div className='num1'>
-                        <h4>65kg</h4>
+                        <h4>70kg</h4>
                         <h6>Weight</h6>
                     </div>
                     <div className='num2'>
