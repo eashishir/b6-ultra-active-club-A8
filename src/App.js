@@ -2,6 +2,7 @@
 import './App.css';
 import FreeStyle from './Components/FreeStyle/FreeStyle';
 import Header from './Components/Header/Header';
+import Question from './Components/Question/Question';
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div>
       <Header></Header>
       <FreeStyle></FreeStyle>
+      <Question></Question>
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import './style.css'
 
-const Style = (props) => {
-    const { name, img, time, title } = props.freestyle;
+const Style = ({ freestyle, handelAddTolCart }) => {
+    const { name, img, time, title } = freestyle;
     return (
         <div className='style'>
             <img src={img} alt="" />
@@ -13,7 +13,7 @@ const Style = (props) => {
                 <br />
 
             </div>
-            <button className='btn-cart'>
+            <button onClick={() => handelAddTolCart(freestyle)} className='btn-cart'>
                 <p>Add To Cart</p>
 
             </button>

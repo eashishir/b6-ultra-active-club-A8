@@ -5,12 +5,20 @@ import my from '../../image/download.png'
 
 const FreeStyle = () => {
     const [freeStyles, setFreeStyles] = useState([])
-    // const [cart, setCart] = useState([])
+    const [cart, setCart] = useState([])
     useEffect(() => {
         fetch('freestyle.json')
             .then(res => res.json())
             .then(data => setFreeStyles(data))
     }, []);
+
+    const handelAddTolCart = (freeStyle) => {
+        // console.log(freeStyle)
+        const newCart = [...cart, freeStyle];
+        setCart(newCart);
+        console.log(newCart[0])
+
+    }
 
     return (
         <div className="freeStyle-container">
@@ -19,6 +27,7 @@ const FreeStyle = () => {
                     freeStyles.map(freeStyle => <Style
                         key={freeStyle.id}
                         freestyle={freeStyle}
+                        handelAddTolCart={handelAddTolCart}
                     >
 
                     </Style>)
@@ -35,15 +44,15 @@ const FreeStyle = () => {
                 <div className='person-info'>
                     <div className='num1'>
                         <h4>65kg</h4>
-                        <h7>Weight</h7>
+                        <h6>Weight</h6>
                     </div>
                     <div className='num2'>
                         <h4>5.9'</h4>
-                        <h7>Height</h7>
+                        <h6>Height</h6>
                     </div>
                     <div className='num3'>
                         <h4>22Y</h4>
-                        <h7>Age</h7>
+                        <h6>Age</h6>
                     </div>
                 </div>
                 <h2>Add A Break(min)</h2>
@@ -56,7 +65,7 @@ const FreeStyle = () => {
                 </div>
                 <h2>Exercise Details</h2>
                 <div className=' exercise-info'>
-                    <h4>Exercise time: <small>0</small> min</h4>
+                    <h4>Exercise time:{cart.time}min</h4>
                     <h4>break time: <small>0</small> min</h4>
                 </div>
                 <button className='btn-add'>
