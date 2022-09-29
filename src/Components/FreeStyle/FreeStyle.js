@@ -73,7 +73,7 @@ const FreeStyle = () => {
                         <h6>Height</h6>
                     </div>
                     <div className='num3'>
-                        <h4>22Y</h4>
+                        <h4>21Y</h4>
                         <h6>Age</h6>
                     </div>
                 </div>
