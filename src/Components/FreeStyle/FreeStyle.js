@@ -61,7 +61,7 @@ const FreeStyle = () => {
 
                 <div className='my-info'>
                     <img src={my} alt="" />
-                    <h4>Eftekhar Ahmed Shishir</h4>
+                    <h4>Eftekhar Ahmed</h4>
                 </div>
                 <div className='person-info'>
                     <div className='num1'>
